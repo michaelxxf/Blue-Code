@@ -1,0 +1,67 @@
+
+
+.navbar-badge {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    padding: 3px 5px;
+    font-size: 0.6rem;
+    font-weight: 400;
+}
+@media (max-width: 768px) {
+    
+    .navbar-badge {
+        position: absolute;
+        top: 15px;
+        right: 75px;
+        padding: 3px 5px;
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
+    }
+
+.card-warning, .bg-warning, .text-bg-warning {
+    --lte-card-variant-bg: #ffc107;
+    --lte-card-variant-bg-rgb: 255, 193, 7;
+    --lte-card-variant-color: #000;
+    --lte-card-variant-color-rgb: 0, 0, 0;
+}
+
+.text-bg-warning {
+    color: #000 !important;
+    background-color: RGBA(var(--bs-warning-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+
+    margin-top: var(--bs-dropdown-spacer);
+}
+
+.dropdown-menu-lg {
+    min-width: 280px;
+    max-width: 300px;
+    padding: 0;
+}
+
+.dropdown-menu-end {
+    --bs-position: end;
+}
+
+.custom-alert {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; /* Ensure it's above other elements */
+    width: 50%;
+    text-align: center;
+}
+
+
+.bi-bell-fill {
+    position: relative;
+    left: -20px;
+}
+
+
