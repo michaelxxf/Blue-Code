@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction Settings</title>
+    <link rel="stylesheet" href="../../public/assets/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Transaction Settings</h2>
+      <form method="POST" action="/merchant/transaction-settings" id="transaction-settings-form">
+        <!-- Booking Reference Prefix -->
+        <div class="form-group">
+          <label for="booking_reference_prefix">Booking Reference Prefix</label>
+          <input type="text" class="form-control" name="booking_reference_prefix" id="booking_reference_prefix" placeholder="e.g., Welcome to My Store" required>
+          <small class="form-text text-muted">
+            This will appear on the payer's bank statement.
+          </small>
+        </div>
+
+        <!-- Bluecode Member ID -->
+        <div class="form-group">
+          <label for="bluecode_member_id">Bluecode Member ID</label>
+          <input type="text" class="form-control" name="bluecode_member_id" id="bluecode_member_id" placeholder="Enter your Bluecode Member ID" required>
+        </div>
+
+        <!-- Default Source -->
+        <div class="form-group">
+          <label for="default_source">Default Payment Source</label>
+          <select class="form-control" name="default_source" id="default_source" required>
+            <option value="ECOMMERCE">Ecommerce</option>
+            <option value="POS">POS</option>
+            <option value="MOBILE">Mobile</option>
+          </select>
+        </div>
+
+        <!-- Instant Payment Settings -->
+        <h4>Instant Payment Settings</h4>
+        <div class="form-group">
+          <label for="instant_networks">Accepted Instant Networks</label>
+          <input type="text" class="form-control" name="instant_networks" id="instant_networks" placeholder="e.g., NIBBS, NIP (comma separated)" required>
+          <small class="form-text text-muted">
+            Enter network codes separated by commas.
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="beneficiary_name">Beneficiary Name</label>
+          <input type="text" class="form-control" name="beneficiary_name" id="beneficiary_name" placeholder="Merchant bank account name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="beneficiary_reference">Beneficiary Reference</label>
+          <input type="text" class="form-control" name="beneficiary_reference" id="beneficiary_reference" placeholder="Merchant bank account number" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Save Transaction Settings</button>
+      </form>
+    </div>
+
+    <script src="../../public/assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
